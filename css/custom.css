@@ -81,8 +81,14 @@
   right: 5px;
   bottom: 5px;
   left: 5px; }
+/* .navbar {
+  display: none;}
+/* the position, top, and left are Max's additions to keep nav bar at top of page */
 .navbar {
-  display: none; }
+  display: none;
+  position:fixed; 
+    top: 0;
+    left: 0;}
 
 /* Larger than phone */
 @media (min-width: 550px) {
@@ -132,11 +138,12 @@
     margin-bottom: 0; }
   .navbar-item {
     position: relative;
+    /* position: relative; */
     float: left;
     margin-bottom: 0; }
   .navbar-link {
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: .2rem;
     margin-right: 35px;
