@@ -3,6 +3,9 @@
 <head>
 
   <!-- Basic Page Needs
+  This contains basic data specifically title, descriptino and author name.
+  The title is just the website title for the brower tab and for search engine results.
+  This code does not show an actual title on the page.
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>SFU Locomotion Lab</title>
@@ -10,20 +13,32 @@
   <meta name="author" content="Max Donelan and team">
 
   <!-- Mobile Specific Metas
+  It sets the view size allowing for use on mobile phones.
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- FONT
+  Google font API is an open source collection of fonts that can be used in websites.
+  link href calls the googleapis link that contains the family of fonts we want to use. Here we're using the font Raleway. 
+  400, 300, 600 refer to three different weights for this font that we want to be able to use in this webpage. 
+  rel="stylesheet" tells the browser that these details describe the styles to be applied to the document presentation.
+  type="text/css" means that we want to use CSS ie Cascading Style Sheets.
+  To modify this, replace with the new fontname and font weights if required.
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
   <!-- CSS
+  These link to three css files that can be found in the css folder in the sfulocomotionlab.github.io directory.
+  They contain details about what fonts and styles to use for specifc sections such as headers, paragraphs etc, which are called
+  using h1,h2, p, etc in the document below.
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/skeleton.css">
   <link rel="stylesheet" href="./css/custom.css">
       
   <!-- Favicon
+  I don't think we currently have any favicons but this allows us to choose images from a github repository to be favicons.
+  IT currently links to an image that shows S in folder "images" in the sfulocomotionlab.github.io directory.
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="../github.io/images/favicon.png">
 
@@ -31,7 +46,15 @@
 <body>
 
 <!-- Primary Page Layout ––––––––––––––––––––––––––––––––––––––– -->
-<!-- Navigation Bar  -->
+<!-- Navigation Bar  
+This is a list of items we want on the navigation bar that is at the top
+To add to this list use the same syntax used for the items below abd replace the item name.
+For example, to include a item called "Alumni" on the navigation bar,
+<li class="navbar-item"><a class="navbar-link" href="#code">Code</a></li>
+becomes
+<li class="navbar-item"><a class="navbar-link" href="#alumni">Alumni</a></li>
+This needs to be followed up with an actual section called "Alumni" below to which this navigation item will link.
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
      <div class="navbar-spacer"></div>
      <nav class="navbar">
        <div class="container">
@@ -55,7 +78,16 @@
 		<p>The SFU Locomotion Lab is within the <a href="http://www.sfu.ca/bpk/">Department of Biomedical Physiology & Kinesiology</a>, in the <a href="//www.sfu.ca/science/">Faculty of Science</a>, at <a href="http://www.sfu.ca/">Simon Fraser University</a>. We are affiliated with SFU's <a href="http://www.sfu.ca/engineering/">School of Engineering Science</a>.</p>
 	</div>
 	
-	<!-- PEOPLE  -->	
+	<!-- PEOPLE  
+	This is where you can add or remove the images (and assocaited links) to the people in Locomotion Lab
+	Everythign until img class (inclusive) sets the formatiing for the images.
+	src contains the location of the image within the sfulocomotionlab.github.io directory.
+	To use src and call a new photo, we need to first upload the photo to the folder called images, and give the image file a name as done below. 
+	Ex: Max_resize.jpg is the name of the image file for Max Donelan's photo from the folder called images in our directory 
+	href= adds the specified link to the text that follows it.
+	Ex: Prof. Max Donelan is the text and it links to the page https://sfulocomotionlab.github.io/max/ 
+	The text will appear below the photo. 
+	–––––––––––––––––––––––––––––––––––––––––––––––––– p-->	
 	<div class="docs-section" id="people">
 		<p></p>
       <h6 class="docs-header">People</h6>
@@ -84,21 +116,28 @@
           <img class="value-img" src="images/Patrick_resize.jpg">
           <a href="https://www.linkedin.com/in/patrick-mayerhofer-775413180/">Patrick Mayerhofer, PhD Student</a>
         </div>
+	<!-- Insert new People here -->
       </div>
 	</div>
 
-	<!-- PUBLICATIONS  -->	
+	<!-- PUBLICATIONS  
+	This is a list of the publications from the lab.
+	To include new ones, upload a pdf of the publication to the folder "assets" in the sfulocomotionlab.github.io directory.
+	Then use the citation format below to list the pbulication and use href= to link to the title of the publication to the file in the assets folder.
+	href= links the given link to the title that immediately follows it.
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 	<div class="docs-section" id="publications">
       		<p></p>
 		<h6 class="docs-header">Publications</h6>
 		   <ol>
+			   <!-- Insert new publications here -->
 			   <li>S.N. Mohamed Thangal, and J.M. Donelan. <a href="./assets/Thangal-PLOS-ONE-2020.pdf"> Scaling of inertial delays in terrestrial mammals.</a> PLoS ONE. 15(2), e0217188, 2020.</li>
-               <li>J.C. Selinger, J.D. Wong, S.N. Simha, and J.M. Donelan. <a href="./assets/Selinger-JEB-2019.pdf"> How humans initiate energy optimization and converge on their optimal gaits.</a> Journal of Experimental Biology. 222 (19), jeb198234 2019.</li>
-               <li>N. Sanchez, S.N. Simha, J.M. Donelan, and J.M. Finley. <a href="./assets/Sanchez-J-Physiol-2019.pdf">  Taking advantage of external mechanical work to reduce metabolic cost: the mechanics and energetics of split‐belt treadmill walking.</a> The Journal of physiology. 597 (15), 4053-4068, 2019.</li>
-               <li>S.J. Abram, J.C. Selinger, and J.M. Donelan. <a href="./assets/Abram-J-Biomch-2019.pdf"> Energy optimization is a major objective in the real-time control of step width in human walking.</a> Journal of biomechanics. 91, 85-91, 2019.</li>
-               <li>J.D. Wong, J.C. Selinger, and J.M. Donelan. <a href="./assets/Wong-J-Neurophysiol-2019.pdf"> Is natural variability in gait sufficient to initiate spontaneous energy optimization in human walking?</a> Journal of neurophysiology. 121 (5), 1848-1855, 2019.</li>
-               <li>N.L. Zaino, K.M. Steele, J.M. Donelan, and M.H. Schwartz. <a href="./assets/Zaino-Biorxiv-2019.pdf"> Spasticity reduction in children with cerebral palsy is not associated with reduced energy consumption during walking.</a> BioRxiv, 653071, 2019.</li>
-               <li>H.L. More, and  J.M. Donelan. <a href="./assets/More-PRSB-2018.pdf"> Scaling of sensorimotor delays in terrestrial mammals.</a> Proceedings of the Royal Society B. 285, pp. 1885, 2018.</li>
+               		   <li>J.C. Selinger, J.D. Wong, S.N. Simha, and J.M. Donelan. <a href="./assets/Selinger-JEB-2019.pdf"> How humans initiate energy optimization and converge on their optimal gaits.</a> Journal of Experimental Biology. 222 (19), jeb198234 2019.</li>
+               		   <li>N. Sanchez, S.N. Simha, J.M. Donelan, and J.M. Finley. <a href="./assets/Sanchez-J-Physiol-2019.pdf">  Taking advantage of external mechanical work to reduce metabolic cost: the mechanics and energetics of split‐belt treadmill walking.</a> The Journal of physiology. 597 (15), 4053-4068, 2019.</li>
+               		   <li>S.J. Abram, J.C. Selinger, and J.M. Donelan. <a href="./assets/Abram-J-Biomch-2019.pdf"> Energy optimization is a major objective in the real-time control of step width in human walking.</a> Journal of biomechanics. 91, 85-91, 2019.</li>
+               		   <li>J.D. Wong, J.C. Selinger, and J.M. Donelan. <a href="./assets/Wong-J-Neurophysiol-2019.pdf"> Is natural variability in gait sufficient to initiate spontaneous energy optimization in human walking?</a> Journal of neurophysiology. 121 (5), 1848-1855, 2019.</li>
+               		   <li>N.L. Zaino, K.M. Steele, J.M. Donelan, and M.H. Schwartz. <a href="./assets/Zaino-Biorxiv-2019.pdf"> Spasticity reduction in children with cerebral palsy is not associated with reduced energy consumption during walking.</a> BioRxiv, 653071, 2019.</li>
+               		   <li>H.L. More, and  J.M. Donelan. <a href="./assets/More-PRSB-2018.pdf"> Scaling of sensorimotor delays in terrestrial mammals.</a> Proceedings of the Royal Society B. 285, pp. 1885, 2018.</li>
 			   <li>J.D. Wong, S.M. O’Connor, J.C. Selinger, and J.M. Donelan. <a href="./assets/Wong-J-Neurophysiol-2017.pdf">  Contribution of blood oxygen and carbon dioxide sensing to the energetic optimization of human walking.</a> Journal of Neurophysiology. 118(2), pp. 1425-1433, 2017.</li>
 			   <li>J.D. Wong, J.M. Donelan. <a href="./assets/humanoid-robotics-chapter-article-with-figs-1.pdf"> Principles of energetics and stability in human locomotion </a>. Humanoid Robotics: A Reference. Springer, 2016.</li>
 			   <li>S.M. O&#8217;Connor, J.D. Wong, and J.M. Donelan. <a href="./assets/j-appl-physiol-2016-oconnor.pdf">A generalized method for controlling end-tidal respiratory gases during nonsteady physiological conditions</a> <span>Journal of Applied Physiology.</span><span> </span><span>121</span><span>(6), pp. 1363-1378, 2016.</span></li>
@@ -141,11 +180,17 @@
 			   </ol>
 	</div>
 	
-	<!-- PATENTS  -->	
+	<!-- PATENTS  
+	This is a list of the patents from the lab.
+	Use the citation format below to list the patent and use href= to link to the title of the patent.
+	Currently all the patent files are patentimages.storage.googleapis.com but any relevant link may be used.
+	href= links the given link to the title that immediately follows it.
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 	<div class="docs-section" id="patents">
       		<p></p>
 		<h6 class="docs-header">Patents</h6>
 		   <ol>
+			   <!-- Insert new patents here -->
 			   <li>M. Snaterse, S.J. Chang, and J.M. Donelan. <a href="https://patentimages.storage.googleapis.com/07/29/fc/4a8e321f991ce2/US20190272345A1.pdf">Methods and Systems for Control of Human Locomotion.</a> United States, Sept 05, 2019. US16299120. Under Examination.</li>
 			   <li>M. Snaterse, S.J. Chang, and J.M. Donelan. <a href="https://patentimages.storage.googleapis.com/cc/57/17/4c577a1f47b052/US20190266292A1.pdf">Methods and Systems for Control of Human Cycling Speed.</a> United States, Aug 29, 2019. US16297300. Under Examination.</li>
 			   <li>M. Snaterse, S.J. Chang, and J.M. Donelan. <a href="https://patentimages.storage.googleapis.com/67/c6/16/53b8fd36449485/US10289753B2.pdf">Methods and Systems for Guidance of Human Locomotion.</a> United States, May 14, 2019. US10289753.</li>
@@ -157,42 +202,61 @@
 		</ol>
 	</div>
 	
-	<!-- PRESS  -->	
+	<!-- PRESS  
+	This is a list of the press appearances of work from the lab.
+	Use the citation format below to list the relevant press release. The content might fall under different catergories.
+	If the content is related to a specific publicatiion, then list the publication and use href= to add the links to the press releases underneath.
+	If the content is related to people in the lab, use href= to add the link under the relevant catergory.
+	href= links the given link to the title that immediately follows it.
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 	<div class="docs-section" id="press">
       		<p></p>
 <!-- <h1 class="docs-header">Press</h1> -->
       <h5 class="docs-header">Press</h5>
 				<!--<p><strong>PAPERS</strong></p>-->
-<p><strong></strong><strong>Humans can continuously optimize energetic cost during walking</strong>. <em>Current Biology</em>, 2015.<br />
-<a href="http://www.nytimes.com/2015/09/15/science/its-my-nervous-system-thats-lazy.html?rref=collection%2Fsectioncollection%2Fscience&#038;action=click&#038;contentCollection=science&#038;region=stream&#038;module=stream_unit&#038;version=latest&#038;contentPlacement=1&#038;pgtype=sectionfront&#038;_r=1&#038;mtrref=www.nytimes.com/"> New York Times</a>, <a href="http://www.bbc.com/news/health-34198916">BBC</a>, <a href="http://time.com/4027942/lazy-walking-exercise/?xid=tcoshare">TIME</a>, <a href="http://www.theglobeandmail.com/life/health-and-fitness/fitness/humans-are-hard-wired-to-expend-as-little-energy-as-possible-study-finds/article26334952/">The Globe and Mail</a>, <a href="https://www.sciencenews.org/article/humans-adjust-walking-style-energy-efficiency">Science News Magazine</a>, <a href="https://www.newscientist.com/article/dn28155-exoskeleton-reveals-the-lengths-we-go-to-save-energy-when-walking/">New Scientist</a>, <a href="http://www.latimes.com/science/sciencenow/la-sci-sn-laziness-imperative-exercise-calories-20150910-story.html">LA Times</a>, <a href="http://www.thenakedscientists.com/HTML/podcasts/naked-scientists/show/20150915/">The Naked Scientist</a>, <a href="http://gizmodo.com/humans-are-wired-for-laziness-study-finds-1730168216">Gizmodo</a>, <a href="http://www.vancouversun.com/technology/researchers+human+nervous+systems+adapt+minimize+body+movements/11353517/story.html">The Vancouver Sun</a>, <a href="http://globalnews.ca/news/2215141/humans-are-wired-to-be-lazy-study/">Global News</a>, <a href="http://globalnews.ca/video/2220451/sfu-study-finds-humans-are-inherently-lazy">Global BC</a>, <a href="http://www.cbsnews.com/news/humans-wired-to-use-fewer-calories-while-walking/">CBS News</a>, <a href="http://www.today.com/health/born-be-lazy-how-change-your-walk-burn-calories-faster-t43171">TODAY.com</a>,&#8230;</p>
-<p><strong></strong><strong>The Kangaroo’s tail propels and powers pentapedal locomotion</strong>. <em>Biology Letters</em>, 2014.<br />
-<a href="http://news.sciencemag.org/biology/2014/07/amazing-five-legged-kangaroo"> Science</a>, <a href="http://www.nature.com/nature/journal/v511/n7508/full/511128c.html">Nature</a>, <a href="http://www.nytimes.com/2014/07/28/science/for-kangaroos-tail-becomes-a-fifth-leg.html">New York Times</a>, <a href="http://www.cbc.ca/news/technology/kangaroos-use-tail-as-a-5th-leg-b-c-researcher-finds-1.2693482">CBC</a>, <a href="https://www.newscientist.com/article/dn25829-zoologger-meet-the-only-animal-with-five-legs/">New Scientist</a>, &#8230;</p>
-<p><strong>Sensorimotor responsiveness and resolution in the giraffe</strong>. <em>Journal of Experimental Biology</em>, 2013.<br />
-<a href="http://www.nytimes.com/2014/10/07/science/our-understanding-of-giraffes-does-not-measure-up.html"> New York Times</a>, <a href="http://blogs.discovermagazine.com/visualscience/2013/02/27/giraffes-long-nerves-make-them-slow-to-respond/#.VedlirRJrQA">Discover</a>, <a href="http://jeb.biologists.org/content/216/6/iii.full">Inside JEB</a>.</p>
-<p><strong>Fast visual prediction and slow optimization of preferred walking speed</strong>. <em>Journal of Neurophysiology</em>, 2012. + <strong>Cruise Control iPhone App</strong><br />
-<a href="http://well.blogs.nytimes.com/2013/02/06/getting-into-your-exercise-groove/"> New York Times</a>, <a href="http://www.theglobeandmail.com/life/health-and-fitness/fitness/running/how-this-science-backed-app-can-make-you-a-better-runner/article8111663/">Globe &amp; Mail</a>, <a href="http://www.runnersworld.com/sweat-science/a-cruise-control-for-running">Runner&#8217;s World</a>, <a href="http://runningmagazine.ca/lab-rat-cruise-control/">Running Magazine</a>, <a href="http://allthingsd.com/20130225/three-running-apps-to-shake-up-your-routine/">AllThingsD</a>, &#8230;</p>
-<p><strong>Scaling of sensorimotor control in terrestrial mammals</strong>. <em>Proceedings of the Royal Society B</em>, 2010.<br />
-<a href="http://www.nytimes.com/2010/07/06/science/06obelephan.html"> New York Times</a>, <a href="http://www.theglobeandmail.com/life/health-and-fitness/health/conditions/small-equals-quick-but-maybe-not-so-smart/article623392/">Globe &amp; Mail</a>, <a href="http://www.canada.com/story.html?id=1adb754c-e2a7-4989-8ea1-8203798ce70c">Vancouver Sun</a>, <a href="http://www.sfu.ca/locomotionlab/wp-content/uploads/2010/10/cbc-as-it-happens-2010-07-01.mp3">CBC As it Happens</a>, <a href="http://news.nationalgeographic.com/news/2010/06/100629-science-dinosaurs-t-rex-nerves-elephants/">National Geographic</a>, <a href="http://www.smithsonianmag.com/science-nature/tyrannosaurus-didnt-have-the-nerve-to-run-fast-75155024/?no-ist">Smithsonian</a>, &#8230;</p>
-<p><strong>Biomechanical energy harvesting</strong>. <em>Science</em>, 2008.<br />
-<a href="http://news.sciencemag.org/2008/02/device-gives-new-meaning-power-walking">Science</a>, <a href="http://www.nytimes.com/2008/02/08/us/08knees.html">New York Times</a>, <a href="http://www.economist.com/node/10640707">The Economist</a>, <a href="http://www.washingtonpost.com/wp-dyn/content/article/2008/02/07/AR2008020702051.html">Washington Post</a>, <a href="http://www.sfu.ca/locomotionlab/wp-content/uploads/2009/07/globe-and-mail-feb-8-2008.pdf">Globe &amp; Mail</a>, <a href="http://www.nationalpost.com/news/canada/story.html?id=292922">National Post</a>, <a href="http://www.vancouversun.com/technology/power+cellphone+Just+walk+blocks/292922/story.html">Vancouver Sun</a>, <a href="http://www.sfu.ca/locomotionlab/wp-content/uploads/2009/06/bbc-frontiers-2008-05-12.mp3">BBC Frontiers</a>, <a href="http://www.sfu.ca/locomotionlab/wp-content/uploads/2009/06/npr-science-friday-2008-02-08.mp3">NPR Science Friday</a>, <a href="http://www.sfu.ca/locomotionlab/wp-content/uploads/2009/06/cbc-quirks-and-quarks-2008-02-09.mp3">CBC Quirks &amp; Quarks</a>, <a href="https://www.youtube.com/watch?v=87i8VhkKJbc&amp;feature=player_embedded">CBC National News</a>, <a href="http://www.wired.com/2008/02/knee-brace-harv/">WIRED</a>, <a href="http://www.technologyreview.com/fromthelabs/409945/from-the-labs-information-technology/">MIT Technology Review</a>, <a href="http://www.scientificamerican.com/article/powering-cell-phone-battery/">Scientific American</a>, <a href="http://www.csmonitor.com/Technology/Responsible-Tech/2009/0603/these-batteries-are-made-for-walkin">Christian Science Monitor</a>, <a href="https://www.newscientist.com/article/dn13287-knee-device-makes-phone-charging-a-walk-in-the-park/">New Scientist</a>, <a href="http://conservationmagazine.org/2008/08/power-walk/">Conservation</a>, &#8230;</p>
-<p><strong>Invention &amp; Entrepreneurship<br />
-</strong><a href="http://www.nytimes.com/2008/12/14/magazine/14ideas-section01-t-004.html">New York Times Magazine</a>, <a href="http://content.time.com/time/specials/packages/article/0,28804,1852747_1854195_1854172,00.html">TIME</a>, <a href="http://www.bcbusiness.ca/people/the-inventors">BC Business</a>, <a href="http://www.sfu.ca/locomotionlab/wp-content/uploads/2009/06/vancouver-magazine-apr-2009.pdf">Vancouver Magazine</a>, &#8230;</p>
-<p><strong>Interviews &amp; Articles<br />
-</strong>2008: <a href="http://green.blogs.nytimes.com//2008/11/10/culturing-an-appreciation-of-energy-and-power/">New York Times</a>, <a href="http://www.washingtonpost.com/wp-dyn/content/article/2008/02/08/AR2008020803269.html">Washington Post</a>, <a href="http://www.newsweek.com/harvesting-energy-stomping-feet-84975">Newsweek</a>, &#8230;<br />
-2009: <a href="http://www.popsci.com/environment/article/2009-01/harvesting-energy-humans">Popular Science</a> (Jan), <a href="http://www.popsci.com/scitech/article/2009-02/power-people">Popular Science</a> (Mar), <a href="http://www.sfu.ca/locomotionlab/wp-content/uploads/2009/06/explore-jun-2009.pdf">Explore</a>, &#8230;<br />
-2013: <a href="http://www.slate.com/articles/health_and_science/alternative_energy/2013/03/kinetic_energy_harvesting_technology_to_power_lights_cell_phones_medical.html">Slate</a>, <a href="http://www.scientificamerican.com/article/pavement-pounders-at-paris-marathon-generate-power/">Scientific American</a>, <a href="http://www.universityaffairs.ca/news/news-article/sfu-developed-device-lets-users-generate-electricity-while-walking-aspx/">University Affairs</a>, &#8230;<br />
-2014: <a href="http://www.newsweek.com/2014/10/03/piezoelectricity-and-other-ways-your-body-can-charge-your-phone-272349.html">Newsweek</a>, <a href="http://blogs.scientificamerican.com/guest-blog/spider-man-rhino-and-what-it-takes-to-power-an-exoskeleton/">Scientific American</a>, &#8230;<br />
-2015: <a href="http://www.nature.com/news/exoskeleton-boots-improve-on-evolution-1.17237">Nature</a>, &#8230;</p>
-<p><strong>Public Talks</strong> <br />
-2011: <a href="http://tedxtalks.ted.com/video/TEDxJuanDeFuca-Max-Donelan-Ener">TEDx</a> <strong> </strong></p>
-</div>
+		
+		<!-- Insert new press releases related to manuscripts here -->
+		<p><strong></strong><strong>Humans can continuously optimize energetic cost during walking</strong>. <em>Current Biology</em>, 2015.<br />
+		<a href="http://www.nytimes.com/2015/09/15/science/its-my-nervous-system-thats-lazy.html?rref=collection%2Fsectioncollection%2Fscience&#038;action=click&#038;contentCollection=science&#038;region=stream&#038;module=stream_unit&#038;version=latest&#038;contentPlacement=1&#038;pgtype=sectionfront&#038;_r=1&#038;mtrref=www.nytimes.com/"> New York Times</a>, <a href="http://www.bbc.com/news/health-34198916">BBC</a>, <a href="http://time.com/4027942/lazy-walking-exercise/?xid=tcoshare">TIME</a>, <a href="http://www.theglobeandmail.com/life/health-and-fitness/fitness/humans-are-hard-wired-to-expend-as-little-energy-as-possible-study-finds/article26334952/">The Globe and Mail</a>, <a href="https://www.sciencenews.org/article/humans-adjust-walking-style-energy-efficiency">Science News Magazine</a>, <a href="https://www.newscientist.com/article/dn28155-exoskeleton-reveals-the-lengths-we-go-to-save-energy-when-walking/">New Scientist</a>, <a href="http://www.latimes.com/science/sciencenow/la-sci-sn-laziness-imperative-exercise-calories-20150910-story.html">LA Times</a>, <a href="http://www.thenakedscientists.com/HTML/podcasts/naked-scientists/show/20150915/">The Naked Scientist</a>, <a href="http://gizmodo.com/humans-are-wired-for-laziness-study-finds-1730168216">Gizmodo</a>, <a href="http://www.vancouversun.com/technology/researchers+human+nervous+systems+adapt+minimize+body+movements/11353517/story.html">The Vancouver Sun</a>, <a href="http://globalnews.ca/news/2215141/humans-are-wired-to-be-lazy-study/">Global News</a>, <a href="http://globalnews.ca/video/2220451/sfu-study-finds-humans-are-inherently-lazy">Global BC</a>, <a href="http://www.cbsnews.com/news/humans-wired-to-use-fewer-calories-while-walking/">CBS News</a>, <a href="http://www.today.com/health/born-be-lazy-how-change-your-walk-burn-calories-faster-t43171">TODAY.com</a>,&#8230;</p>
+		<p><strong></strong><strong>The Kangaroo’s tail propels and powers pentapedal locomotion</strong>. <em>Biology Letters</em>, 2014.<br />
+		<a href="http://news.sciencemag.org/biology/2014/07/amazing-five-legged-kangaroo"> Science</a>, <a href="http://www.nature.com/nature/journal/v511/n7508/full/511128c.html">Nature</a>, <a href="http://www.nytimes.com/2014/07/28/science/for-kangaroos-tail-becomes-a-fifth-leg.html">New York Times</a>, <a href="http://www.cbc.ca/news/technology/kangaroos-use-tail-as-a-5th-leg-b-c-researcher-finds-1.2693482">CBC</a>, <a href="https://www.newscientist.com/article/dn25829-zoologger-meet-the-only-animal-with-five-legs/">New Scientist</a>, &#8230;</p>
+		<p><strong>Sensorimotor responsiveness and resolution in the giraffe</strong>. <em>Journal of Experimental Biology</em>, 2013.<br />
+		<a href="http://www.nytimes.com/2014/10/07/science/our-understanding-of-giraffes-does-not-measure-up.html"> New York Times</a>, <a href="http://blogs.discovermagazine.com/visualscience/2013/02/27/giraffes-long-nerves-make-them-slow-to-respond/#.VedlirRJrQA">Discover</a>, <a href="http://jeb.biologists.org/content/216/6/iii.full">Inside JEB</a>.</p>
+		<p><strong>Fast visual prediction and slow optimization of preferred walking speed</strong>. <em>Journal of Neurophysiology</em>, 2012. + <strong>Cruise Control iPhone App</strong><br />
+		<a href="http://well.blogs.nytimes.com/2013/02/06/getting-into-your-exercise-groove/"> New York Times</a>, <a href="http://www.theglobeandmail.com/life/health-and-fitness/fitness/running/how-this-science-backed-app-can-make-you-a-better-runner/article8111663/">Globe &amp; Mail</a>, <a href="http://www.runnersworld.com/sweat-science/a-cruise-control-for-running">Runner&#8217;s World</a>, <a href="http://runningmagazine.ca/lab-rat-cruise-control/">Running Magazine</a>, <a href="http://allthingsd.com/20130225/three-running-apps-to-shake-up-your-routine/">AllThingsD</a>, &#8230;</p>
+		<p><strong>Scaling of sensorimotor control in terrestrial mammals</strong>. <em>Proceedings of the Royal Society B</em>, 2010.<br />
+		<a href="http://www.nytimes.com/2010/07/06/science/06obelephan.html"> New York Times</a>, <a href="http://www.theglobeandmail.com/life/health-and-fitness/health/conditions/small-equals-quick-but-maybe-not-so-smart/article623392/">Globe &amp; Mail</a>, <a href="http://www.canada.com/story.html?id=1adb754c-e2a7-4989-8ea1-8203798ce70c">Vancouver Sun</a>, <a href="http://www.sfu.ca/locomotionlab/wp-content/uploads/2010/10/cbc-as-it-happens-2010-07-01.mp3">CBC As it Happens</a>, <a href="http://news.nationalgeographic.com/news/2010/06/100629-science-dinosaurs-t-rex-nerves-elephants/">National Geographic</a>, <a href="http://www.smithsonianmag.com/science-nature/tyrannosaurus-didnt-have-the-nerve-to-run-fast-75155024/?no-ist">Smithsonian</a>, &#8230;</p>
+		<p><strong>Biomechanical energy harvesting</strong>. <em>Science</em>, 2008.<br />
+		<a href="http://news.sciencemag.org/2008/02/device-gives-new-meaning-power-walking">Science</a>, <a href="http://www.nytimes.com/2008/02/08/us/08knees.html">New York Times</a>, <a href="http://www.economist.com/node/10640707">The Economist</a>, <a href="http://www.washingtonpost.com/wp-dyn/content/article/2008/02/07/AR2008020702051.html">Washington Post</a>, <a href="http://www.sfu.ca/locomotionlab/wp-content/uploads/2009/07/globe-and-mail-feb-8-2008.pdf">Globe &amp; Mail</a>, <a href="http://www.nationalpost.com/news/canada/story.html?id=292922">National Post</a>, <a href="http://www.vancouversun.com/technology/power+cellphone+Just+walk+blocks/292922/story.html">Vancouver Sun</a>, <a href="http://www.sfu.ca/locomotionlab/wp-content/uploads/2009/06/bbc-frontiers-2008-05-12.mp3">BBC Frontiers</a>, <a href="http://www.sfu.ca/locomotionlab/wp-content/uploads/2009/06/npr-science-friday-2008-02-08.mp3">NPR Science Friday</a>, <a href="http://www.sfu.ca/locomotionlab/wp-content/uploads/2009/06/cbc-quirks-and-quarks-2008-02-09.mp3">CBC Quirks &amp; Quarks</a>, <a href="https://www.youtube.com/watch?v=87i8VhkKJbc&amp;feature=player_embedded">CBC National News</a>, <a href="http://www.wired.com/2008/02/knee-brace-harv/">WIRED</a>, <a href="http://www.technologyreview.com/fromthelabs/409945/from-the-labs-information-technology/">MIT Technology Review</a>, <a href="http://www.scientificamerican.com/article/powering-cell-phone-battery/">Scientific American</a>, <a href="http://www.csmonitor.com/Technology/Responsible-Tech/2009/0603/these-batteries-are-made-for-walkin">Christian Science Monitor</a>, <a href="https://www.newscientist.com/article/dn13287-knee-device-makes-phone-charging-a-walk-in-the-park/">New Scientist</a>, <a href="http://conservationmagazine.org/2008/08/power-walk/">Conservation</a>, &#8230;</p>
+		
+		<p><strong>Invention &amp; Entrepreneurship<br />
+		<!-- Insert new press releases related to Invention and Entrepreneurship here -->
+		</strong><a href="http://www.nytimes.com/2008/12/14/magazine/14ideas-section01-t-004.html">New York Times Magazine</a>, <a href="http://content.time.com/time/specials/packages/article/0,28804,1852747_1854195_1854172,00.html">TIME</a>, <a href="http://www.bcbusiness.ca/people/the-inventors">BC Business</a>, <a href="http://www.sfu.ca/locomotionlab/wp-content/uploads/2009/06/vancouver-magazine-apr-2009.pdf">Vancouver Magazine</a>, &#8230;</p>
+		
+		<p><strong>Interviews &amp; Articles<br />
+		<!-- Insert new press releases related to Interviews and general articles here -->
+		</strong>2008: <a href="http://green.blogs.nytimes.com//2008/11/10/culturing-an-appreciation-of-energy-and-power/">New York Times</a>, <a href="http://www.washingtonpost.com/wp-dyn/content/article/2008/02/08/AR2008020803269.html">Washington Post</a>, <a href="http://www.newsweek.com/harvesting-energy-stomping-feet-84975">Newsweek</a>, &#8230;<br />
+		2009: <a href="http://www.popsci.com/environment/article/2009-01/harvesting-energy-humans">Popular Science</a> (Jan), <a href="http://www.popsci.com/scitech/article/2009-02/power-people">Popular Science</a> (Mar), <a href="http://www.sfu.ca/locomotionlab/wp-content/uploads/2009/06/explore-jun-2009.pdf">Explore</a>, &#8230;<br />
+		2013: <a href="http://www.slate.com/articles/health_and_science/alternative_energy/2013/03/kinetic_energy_harvesting_technology_to_power_lights_cell_phones_medical.html">Slate</a>, <a href="http://www.scientificamerican.com/article/pavement-pounders-at-paris-marathon-generate-power/">Scientific American</a>, <a href="http://www.universityaffairs.ca/news/news-article/sfu-developed-device-lets-users-generate-electricity-while-walking-aspx/">University Affairs</a>, &#8230;<br />
+		2014: <a href="http://www.newsweek.com/2014/10/03/piezoelectricity-and-other-ways-your-body-can-charge-your-phone-272349.html">Newsweek</a>, <a href="http://blogs.scientificamerican.com/guest-blog/spider-man-rhino-and-what-it-takes-to-power-an-exoskeleton/">Scientific American</a>, &#8230;<br />
+		2015: <a href="http://www.nature.com/news/exoskeleton-boots-improve-on-evolution-1.17237">Nature</a>, &#8230;</p>
+		
+		<p><strong>Public Talks</strong> <br />
+		<!-- Insert new Public Talks here -->
+		2011: <a href="http://tedxtalks.ted.com/video/TEDxJuanDeFuca-Max-Donelan-Ener">TEDx</a> <strong> </strong></p>
+		</div>
 	
-	<!-- Code  -->	
+	<!-- Code  
+	This is simply a link to our github repository that contains the code written by members of the lab
+	New links to code elsewhere may also be added using href=
+	href= links the given link to the title that immediately follows it.
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->	
 		    <div class="docs-section" id="code">
 				      		<p></p>
 <!-- <h1 class="docs-header">Press</h1> -->
       <h5 class="docs-header">Code</h5>
 		<p></p> <!--insert line break for visual effect -->
+		<!-- Insert new links to code here -->
 		   <p>Our <a href="http://github.com/SFULocomotionLab/">GitHub repository</a> is a work in progress (as it should be).</p>	
 	
 	    <div class="docs-section" id="acknowledgements">
